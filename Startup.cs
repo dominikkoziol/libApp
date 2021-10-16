@@ -62,6 +62,13 @@ namespace libApp
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    name: "booksReleaseDate",
+                    pattern: "books/released/{year}/{month}",
+                    defaults: new { controller = "Books", action = "ByReleaseDate" },
+                    new { year = @"\d{4}", month = @"\d{2}" }
+                 );
+
+                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();

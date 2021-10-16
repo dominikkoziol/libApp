@@ -19,5 +19,14 @@ namespace libApp.Controllers
 
             return View(firstBook);
         }
+
+
+        public IActionResult Index(int pageIndex = 1, string sortBy = "Name") => Content($"pageIndex={pageIndex}&sortBy={sortBy}");
+        
+
+        public IActionResult ByReleaseDate(int year, int month)
+        {
+            return Content($"{year}/{month}");
+        }
     }
 }
