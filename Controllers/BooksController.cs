@@ -16,7 +16,7 @@ namespace libApp.Controllers
                 Name = "Law and punishment"
             };
 
-
+            ViewBag.Book = firstBook;
             return View(firstBook);
         }
 

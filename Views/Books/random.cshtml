@@ -3,7 +3,9 @@
 @{
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var book = ViewBag.Book as Book;
 } 
 
 
+<h1>@book.Name</h1>
 <h2>@Model.Name</h2>
